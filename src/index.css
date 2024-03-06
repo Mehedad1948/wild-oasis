@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto ;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+@layer base {
+  body {
+    @apply  font-medium
+  }
+  input {
+    @apply w-fit rounded-md border border-stone-300 px-3 py-2 text-lg
+        placeholder:text-slate-400 focus:outline-none;
+  }
+
+  h1 {
+    @apply text-2xl font-semibold text-stone-600;
+  }
+
+  h2 {
+    @apply text-xl font-semibold text-stone-600;
+  }
+
+  nav {
+  }
+
+  nav a {
+    @apply flex items-center gap-3 text-base font-medium text-gray-500
+            transition-colors duration-300 hover:text-slate-600;
+  }
+
+  nav a svg {
+    @apply h-6 w-6 text-slate-500;
+  }
+
+  nav a.active {
+    @apply text-indigo-600;
+  }
+
+  nav a.active svg {
+    @apply text-indigo-600;
+  }
+}
